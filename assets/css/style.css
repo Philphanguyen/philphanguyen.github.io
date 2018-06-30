@@ -24,10 +24,10 @@ figure {
 }
 .centered {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 35%;
+    padding-left: 35%;
     transform: translate(-50%, -50%);
     background-color: hsl(48, 100%, 67%);
 }

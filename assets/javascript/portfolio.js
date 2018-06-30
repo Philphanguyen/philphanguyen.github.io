@@ -11,6 +11,7 @@ $(document).ready(function () {
 
   var contactData = firebase.database();
 
+  
   var name = "";
   var destination = "";
   var first = "";
