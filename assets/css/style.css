@@ -22,6 +22,11 @@ figure {
     position: relative;
     text-align: center;
 }
+#mobileMenu {
+    margin-top: -40px;
+    color: black;
+    word-spacing: 10px;
+}
 .centered {
     position: absolute;
     top: 80%;

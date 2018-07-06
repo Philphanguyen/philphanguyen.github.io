@@ -35,34 +35,30 @@ $(document).ready(function () {
     });
   });
 
-//train calculations
-  trainData.ref().on("child_added", function(childSnapshot) {
-    var firstConverted = moment(childSnapshot.val().first, "HH:mm").subtract(1, "years");
-    console.log(firstConverted);
-    var currentTime = moment();
-    console.log ("Current Time: " + moment(currentTime).format("hh:mm"));
-    var diffTime = moment().diff(moment(firstConverted), "minutes");
-    console.log ("Difference in time: " + diffTime);
-  
-    var tRemainder = diffTime % childSnapshot.val().frequency;
-    console.log("Remainder: " +tRemainder);
-  
-    var timeTill = childSnapshot.val().frequency - tRemainder;
-    console.log("Minutes till train: " + timeTill);
-  
-    var nextTrain = moment().add(timeTill, "minutes");
-    console.log("Arrival Time: " + moment (nextTrain).format("hh:mm"));
+});//document ready
 
-      console.log(childSnapshot.val().name);
-      console.log(childSnapshot.val().destination);
-      console.log(childSnapshot.val().first);
-      console.log(childSnapshot.val().frequency);
-      $("tbody").append("<tr></tr>");
-      $("tbody").append("<td>" + childSnapshot.val().name + "</td>");
-      $("tbody").append("<td>" + childSnapshot.val().destination + "</td>");
-      $("tbody").append("<td>" + childSnapshot.val().frequency + "</td>");
-      $("tbody").append("<td>" + moment (nextTrain).format("HH:mm") + "</td>");
-      $("tbody").append("<td>" + timeTill + "</td>");
-  })
+document.addEventListener('DOMContentLoaded', function () {
 
-})
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
