@@ -15,8 +15,7 @@
   <link rel="stylesheet" type = "text/css" href = "assets/css/style.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script type="text/javascript" src="assets/javascript/portfolio.js"></script>
 
 </head>
@@ -50,13 +49,13 @@
   </div>
   <div class="content has-text-centered is-hidden-desktop" id="mobileMenu">
     <a class="button is-warning" href="profile.html">
-      <i class="fas fa-user-circle"></i>
+      <i class="fas fa-user-circle fa-lg"></i>
     </a>
     <a class="button is-warning" href="portfolio.html">
-      <i class="fas fa-folder-open"></i>
+      <i class="fas fa-folder-open fa-lg"></i>
     </a>
     <a class="button is-warning" href="contact.html">
-      <i class="fas fa-envelope"></i>
+      <i class="fas fa-envelope fa-lg"></i>
     </a>
   </div>
 </nav>
@@ -65,9 +64,9 @@
   <div class="column is-three-fifths is-offset-one-fifth">
     <h1>Contact</h1>
     <hr>
-    <div id="form">
+    <form id = "myForm">
         <div class="control has-icons-left has-icons-right">
-        <input class="input" type="name" placeholder="Name">
+        <input class="input" type="name" id="name" placeholder="Name">
         <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
         </span>
@@ -77,7 +76,7 @@
         </div>
         <br>
         <div class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="Email">
+        <input class="input" type="email" id="email" placeholder="Email">
         <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
         </span>
@@ -86,12 +85,30 @@
         </span>
         </div>
         <br>
-        <textarea class="textarea" placeholder="Write something."></textarea>
+        <textarea class="textarea" id="message" placeholder="Write something."></textarea>
         <br>
         <div class="control">
-            <button class="button is-warning">Submit</button>
+            <button class="button is-warning" id="submit">Submit</button>
         </div>
+    </form>
+    <div id="thanks">
+      <h1 class="has-text-success">Thank you! I will respond as soon as I can!</h1>
     </div>
+    <section class="section">
+        <div class="container">
+          <h1 class="title">You can also find me on Linkedin and Github</h1>
+          <h2 class="subtitle">
+            <a class="button" target="_blank" href="https://www.linkedin.com/in/phillip-nguyen-a1bb4513/">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            Phillip Nguyen
+            <a class="button" target="_blank" href="https://github.com/Philphanguyen">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+            Philphanguyen
+          </h2>
+        </div>
+    </section>
   </div>
 </div>
 

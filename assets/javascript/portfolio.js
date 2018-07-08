@@ -1,38 +1,37 @@
 $(document).ready(function () {
+  $("#thanks").hide();
   var config = {
     apiKey: "AIzaSyBiVQ7IM5jxuj7GBuQCZIuBVW9hAYHBuZo",
     authDomain: "contactdata-f7d36.firebaseapp.com",
     databaseURL: "https://contactdata-f7d36.firebaseio.com",
     projectId: "contactdata-f7d36",
-    storageBucket: "",
+    storageBucket: "contactdata-f7d36.appspot.com",
     messagingSenderId: "673209766584"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config)
 
   var contactData = firebase.database();
 
   
   var name = "";
-  var destination = "";
-  var first = "";
-  var frequency = "";
+  var email = "";
+  var message = "";
 
   $(document).on("click", "#submit", function (event) {
       event.preventDefault();
-      var name = $("#train-name-input").val().trim();
-      var destination = $("#destination-input").val().trim();
-      var first = $("#first-input").val().trim();
-      var frequency = $("#frequency-input").val().trim();
+      var name = $("#name").val().trim();
+      var email = $("#email").val().trim();
+      var message = $("#message").val().trim();
     
-      trainData.ref().push({
+      contactData.ref().push({
         name: name,
-        destination: destination,
-        first: first,
-        frequency: frequency
+        email: email,
+        message: message,
       });
-    $("#myForm").each(function () {
+     $("#myForm").each(function () {
         this.reset();
-    });
+     });
+     $("#thanks").show();
   });
 
 });//document ready
