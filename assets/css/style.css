@@ -22,6 +22,9 @@ figure {
     position: relative;
     text-align: center;
 }
+#portfolio {
+    margin-bottom: 50px;
+}
 #mobileMenu {
     margin-top: -40px;
 }
