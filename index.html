@@ -6,12 +6,11 @@
 
   <meta charset="UTF-8">
 
-  <title>About Me</title>
+  <title>Pipfolio</title>
   <link rel="icon" type="image/png" href="assets/images/faviconbg.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <link rel="stylesheet" type = "text/css" href = "assets/css/style.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
@@ -19,12 +18,50 @@
   <script type="text/javascript" src="assets/javascript/portfolio.js"></script>
 
 </head>
-
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #parallax1 { 
+    height: 100vh;
+    width: 100%;
+    background-image: url("assets/images/la_observatory.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+  }
+  #parallax2 { 
+    height: 100vh;
+    width: 100%;
+    background-image: url("assets/images/bruges_gate.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+  }
+  #parallax3 { 
+    height: 100vh;
+    width: 100%;
+    background-image: url("assets/images/london_college.jpg");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+  }
+  #mobileMenu {
+    margin-top: -40px;
+  }
+  .footer{
+    flex-shrink: 0;
+    background-color: hsl(48, 100%, 67%);
+  }
+  .section {
+    background-color: hsl(48, 100%, 67%);
+  }
+</style>
 <body>
-
 <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://philphanguyen.github.io/">
+    <a class="navbar-item" href="index.html">
       <img src="assets/images/faviconbg.png" alt="Phillip Phan Nguyenicon" width="26" height="26">
     </a>
     
@@ -37,7 +74,7 @@
     </div>
   </div>
   <div class="navbar-end is-hidden-touch">
-    <a class="navbar-item" href="index.html">
+    <a class="navbar-item" href="profile.html">
       Profile
     </a>
     <a class="navbar-item" href="portfolio.html">
@@ -48,43 +85,59 @@
     </a>
   </div>
   <div class="content has-text-centered is-hidden-desktop" id="mobileMenu">
-    <a href="index.html">
-      Profile
+    <a class="button is-warning" href="profile.html">
+      <i class="fas fa-user-circle"></i>
     </a>
-    <a href="portfolio.html">
-      Portfolio
+    <a class="button is-warning" href="portfolio.html">
+      <i class="fas fa-folder-open"></i>
     </a>
-    <a href="contact.html">
-      Contact
+    <a class="button is-warning" href="contact.html">
+      <i class="fas fa-envelope"></i>
     </a>
   </div>
 </nav>
 
-<div class="columns is-mobile">
-  <div class="column is-three-fifths is-offset-one-fifth">
-    <h1>About Me</h1>
-    <hr>
-    <figure class="image is-128x128">
-      <img src="assets/images/20161013_183501.jpg">
-    </figure>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum luctus felis, ac rhoncus nunc porttitor condimentum. Mauris sit amet dolor eu elit varius varius facilisis id arcu. Proin vel dui massa. Nunc rhoncus fringilla pharetra. Vestibulum bibendum consectetur euismod. Proin commodo purus vitae sollicitudin consectetur.
-    </p>
-    <p>
-      Donec vehicula lacus at leo feugiat lacinia. In et ex ultrices, ultrices neque non, pretium odio. Nunc id eros iaculis, pulvinar quam eget, egestas mauris.
-    </p>
-    <p>
-      Suspendisse dictum, arcu at convallis faucibus, quam sapien tincidunt nunc, sit amet egestas nibh tortor et mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
+<div id="parallax1">
+</div>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Pipfolio
+      </h1>
+      <h2 class="subtitle">
+        The Portfolio page for Phillip Phan Nguyen
+      </h2>
+    </div>
   </div>
+</section>
+
+<div id="parallax2">
+</div>
+
+<section class="section">
+    <div class="container">
+      <h1 class="title">These Pictures are Great</h1>
+      <h2 class="subtitle">
+        I took these pictures myself over the last year. Otherwise they are random.
+      </h2>
+    </div>
+</section>
+
+<div id="parallax3">
 </div>
 
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>Copyright © 
-    </p>
-  </div>
-</footer>
-</body>
-
+    <div class="content has-text-centered">
+      <p>Copyright © 
+      </p>
+      <a class="button is-warning" target="_blank" href="https://github.com/Philphanguyen">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="button is-warning" target="_blank" href="https://www.linkedin.com/in/phillip-nguyen-a1bb4513/">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+  </body>
 </html>

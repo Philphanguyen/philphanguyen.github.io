@@ -24,15 +24,23 @@ figure {
 }
 #mobileMenu {
     margin-top: -40px;
+}
+a:link {
     color: black;
-    word-spacing: 10px;
+}
+a:visited {
+    color:black;
+}
+a:hover {
+    color: white;
 }
 .centered {
     position: absolute;
     top: 80%;
     left: 50%;
-    padding-right: 35%;
-    padding-left: 35%;
+    padding-right: 30%;
+    padding-left: 30%;
+    margin-top: -35px;
     transform: translate(-50%, -50%);
     background-color: hsl(48, 100%, 67%);
 }
